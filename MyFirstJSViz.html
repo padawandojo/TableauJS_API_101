@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript your Tableau!</title>
+  <script src="https://public.tableau.com/javascripts/api/tableau-2.0.0.min.js" type="text/javascript"></script>
+  <script src="tableau101.js" type="text/javascript"></script>
+  
+  <p>My First JavaScript API Viz!</p>
+</head>
+
+<body>
+	<p>Hello Body!</p>
+
+<div id="tableauFilters">
+  <p class="runCode">These buttons filter only on selected view
+        <button onclick="vizFilter('Category','Furniture','REPLACE')">Furniture</button>
+        <button onclick="vizFilter('Category','Office Supplies','REPLACE')">Office Supplies</button>
+        <button onclick="vizFilter('Category','Technology','REPLACE')">Technology</button>
+        <button onclick="clearFilters('Category')">Clear</button>
+  </p>
+  <p class="runCode2">These buttons add filters to view
+        <button onclick="vizFilter('Category','Furniture','ADD')">Furniture</button>
+        <button onclick="vizFilter('Category','Office Supplies','ADD')">Office Supplies</button>
+        <button onclick="vizFilter('Category','Technology','ADD')">Technology</button>
+        <button onclick="clearFilters('Category')">Clear</button>
+  </p>
+  <p class="runCode2">These buttons remove filters from view
+        <button onclick="vizFilter('Category','Furniture','REMOVE')">Furniture</button>
+        <button onclick="vizFilter('Category','Office Supplies','REMOVE')">Office Supplies</button>
+        <button onclick="vizFilter('Category','Technology','REMOVE')">Technology</button>
+  </p>
+  <p class="runCode2">Use these to change the view
+        <button onclick="switchView('SuperStore JS API 101Dark')">SuperStore JS API 101Dark</button>
+        <button onclick="switchView('SuperStore JS API 101')">SuperStore JS API 101</button>
+        <button onclick="switchView('SuperStore JS API 101Bars')">SuperStore JS API 101Bars</button>
+  </p>
+
+
+<div id="tableauViz"></div>
+
+</body>
+
+</html>
